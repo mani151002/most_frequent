@@ -1,0 +1,9 @@
+s = input('enter a string :')
+dict_counter = {}
+for char in s:
+    if not dict_counter or char not in dict_counter.keys():
+        dict_counter.update({char: 1})
+    elif char in dict_counter.keys():
+        dict_counter[char] += 1
+for key, val in dict_counter.items():
+    print(key,val)
